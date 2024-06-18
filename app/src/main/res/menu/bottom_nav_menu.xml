@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="হোম"/>
+
+    <item
+        android:id="@+id/histroy"
+        android:icon="@drawable/lenden"
+        android:title="হিস্ট্রি"/>
+
+    <item
+        android:id="@+id/placeholder"
+        android:title="আ্যাড মানি"/>
+
+    <item
+        android:id="@+id/inbox"
+        android:icon="@drawable/inbox"
+        android:title="ইনবক্স"/>
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_person"
+        android:title="প্রোফাইল"/>
+
+</menu>

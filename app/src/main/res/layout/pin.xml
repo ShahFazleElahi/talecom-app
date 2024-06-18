@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_bc_all_page"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/band"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/kalpurush"
+        android:text="Verify it&apos;s you"
+        android:textColor="#09046A"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/loginbg"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginTop="10dp"
+            android:hint="PIN/OTP"
+            android:textColorHint="#a7a7a7"
+            app:boxStrokeColor="#eaeaee">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordpin"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:inputType="numberPassword"
+                android:textColor="#5b5b5b"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Verify"
+            android:background="#031237"
+            android:textAlignment="center"
+            android:fontFamily="@font/kalpurush"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:text="Forget Pin ?"
+                android:textColor="#a7a7a7"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/textView4"
+                android:text="Contact with support"
+                android:textColor="#3ba8be"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

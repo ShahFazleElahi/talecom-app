@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name="androidx.multidex.MultiDexApplication"
+        android:theme="@style/Theme.SbTelecom"
+        tools:targetApi="31"
+        android:requestLegacyExternalStorage="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:exported="true"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:exported="true"
+            android:resource="@color/white" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.softwarelab.mehedi.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:exported="true"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:exported="true"
+            android:value="ocr" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.softwarelab.mehedi.Start"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.softwarelab.mehedi.view.MainActivityc"
+            android:exported="true"
+            android:label="New Request" />
+        <activity
+            android:name="com.softwarelab.mehedi.Myprofile"
+            android:exported="true"
+            android:label="My profile" />
+        <activity
+            android:name="com.softwarelab.mehedi.Twostep"
+            android:exported="true"
+            android:label="Two step" />
+        <activity
+            android:name="com.softwarelab.mehedi.Addpic"
+            android:exported="true"
+            android:label="Scan Id Card" />
+        <activity
+            android:name="com.softwarelab.mehedi.Cropm"
+            android:exported="true"
+            android:label="Crop Image" />
+        <activity
+            android:name="com.softwarelab.mehedi.Billpay"
+            android:exported="true"
+            android:label="Bill pay" />
+        <activity
+            android:name="com.softwarelab.mehedi.New_support"
+            android:exported="true"
+            android:label="New Support Tricket" />
+        <activity
+            android:name="com.softwarelab.mehedi.Tricket_main_read"
+            android:exported="true"
+            android:label="Support Tricket" />
+        <activity
+            android:name="com.softwarelab.mehedi.Tricket_main"
+            android:exported="true"
+            android:label="Support Tricket" />
+        <activity
+            android:name="com.softwarelab.mehedi.RegisterActivity"
+            android:exported="true"
+            android:label="Create Account" />
+        <activity
+            android:name="com.softwarelab.mehedi.Welcome"
+            android:exported="true"
+            android:label="Service list" />
+        <activity
+            android:name="com.softwarelab.mehedi.Banktransfer"
+            android:exported="true"
+            android:label="Bank Transfer" />
+        <activity
+            android:name="com.softwarelab.mehedi.PinActivity"
+            android:label="Pin Confirm" />
+        <activity
+            android:name="com.softwarelab.mehedi.Mainlist"
+            android:exported="true"
+            android:label="History" />
+        <activity
+            android:name="com.softwarelab.mehedi.News"
+            android:exported="true"
+            android:label="Notice Board" />
+        <activity
+            android:name="com.softwarelab.mehedi.web"
+            android:exported="true"
+            android:label="Welcome" />
+        <activity
+            android:name="com.softwarelab.mehedi.MainActivity"
+            android:exported="true"
+            android:label="Signin" />
+        <activity
+            android:name="com.softwarelab.mehedi.pinver"
+            android:exported="true"
+            android:label="Pin" />
+        <activity
+            android:name="com.softwarelab.mehedi.DisplayActivity"
+            android:exported="true"
+            android:label="New Request" />
+        <activity
+            android:name="com.softwarelab.mehedi.DisplayActivitya"
+            android:exported="true"
+            android:label="New Request" />
+        <activity
+            android:name="com.softwarelab.mehedi.Operator"
+            android:exported="true"
+            android:label="Select Operator" />
+        <activity
+            android:name="com.softwarelab.mehedi.Addres"
+            android:exported="true"
+            android:label="Add reseller" />
+        <activity
+            android:name="com.softwarelab.mehedi.Myreseller"
+            android:exported="true"
+            android:label="Add reseller" />
+        <activity
+            android:name="com.softwarelab.mehedi.Signin"
+            android:exported="true"
+            android:label="Signin" />
+        <activity
+            android:name="com.softwarelab.mehedi.Url"
+            android:exported="true"
+            android:label="Add url" />
+        <activity
+            android:name="com.softwarelab.mehedi.Develop"
+            android:exported="true"
+            android:label="About us" />
+        <activity
+            android:name="com.softwarelab.mehedi.service_a"
+            android:exported="true"
+            android:label="Service us" />
+        <activity
+            android:name="com.softwarelab.mehedi.Editres"
+            android:exported="true"
+            android:label="Edit" />
+        <activity
+            android:name="com.softwarelab.mehedi.Payment"
+            android:exported="true"
+            android:label="Payment" />
+        <activity
+            android:name="com.softwarelab.mehedi.Transfer"
+            android:exported="true"
+            android:label="Transfer" />
+        <activity
+            android:name="com.softwarelab.mehedi.Smssend"
+            android:exported="true"
+            android:label="Send Sms" />
+        <activity
+            android:name="com.softwarelab.mehedi.history_op"
+            android:exported="true"
+            android:label="History" />
+        <activity
+            android:name="com.softwarelab.mehedi.Password"
+            android:exported="true"
+            android:label="Password Change" />
+        <activity
+            android:name="com.softwarelab.mehedi.Pinc"
+            android:exported="true"
+            android:label="Pin change" />
+        <activity
+            android:name="com.softwarelab.mehedi.mydevice"
+            android:exported="true"
+            android:label="My Device" />
+        <activity
+            android:name="com.softwarelab.mehedi.makepay"
+            android:exported="true"
+            android:label="Make payment" />
+        <activity
+            android:name="com.softwarelab.mehedi.Internet"
+            android:exported="true"
+            android:label="Internet Pakage" />
+        <activity
+            android:name="com.softwarelab.mehedi.InternetActivity"
+            android:exported="true"
+            android:label="Internet Pakage" />
+        <activity
+            android:name="com.softwarelab.mehedi.Payment_type"
+            android:exported="true"
+            android:label="Payment type" />
+        <activity
+            android:name="com.softwarelab.mehedi.Dlock"
+            android:exported="true"
+            android:label="Device Lock" />
+
+        <receiver
+            android:name="com.softwarelab.mehedi.FirebaseBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.sbtelecom.mdsabbirdev" />
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.softwarelab.mehedi.com.squareup.picasso"
+            android:exported="false" />
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ml.vision.VisionRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ml.common.CommonComponentRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <!--<activity
+            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+            android:theme="@style/Theme.Translucent.NoTitleBar" />-->
+        <!--<service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>-->
+        <!--<receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="false"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>-->
+        <!--<activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Translucent.NoTitleBar" />-->
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.softwarelab.mehedi.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <!--<receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>-->
+
+        <!--<service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />-->
+
+    </application>
+
+</manifest>
